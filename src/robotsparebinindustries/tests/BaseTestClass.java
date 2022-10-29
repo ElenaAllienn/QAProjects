@@ -13,7 +13,7 @@ public class BaseTestClass {
     @BeforeEach
     public void SetUp(){
         String projectPath = System.getProperty("user.dir");
-        System.setProperty("webdriver.chrome.driver", projectPath + "C:/Users/User/webdrivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", projectPath + "C:/webdrivers/chromedriver.exe"); // INFO: This one is set as that when you can't change the system path to include Selenium
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }

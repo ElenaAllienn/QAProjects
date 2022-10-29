@@ -19,7 +19,7 @@ public class BasePageClass {
         this.driver = driver;
         this.wait = wait;
     }
-    public String environment = "https://robotsparebinindustries.com/#/";
+    public String environment = "https://robotsparebinindustries.com/#/";  // Put strings and other variables that define a class element in the beginning of the class, not somewhere in the middle
     public WebDriver Driver() {
         return driver;
     }
@@ -35,6 +35,8 @@ public class BasePageClass {
     }
     public String AssertErrorValidationMessage() {
         //??
+        return "Sample error message";
+        // Zdravko: There was a missing return statement, why?
     }
 
     public void Refresh(){

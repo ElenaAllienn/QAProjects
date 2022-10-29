@@ -6,18 +6,20 @@ import robotsparebinindustries.pages.LoginPage;
 
 public class TestScrips extends BaseTestClass{
 
+    String username = "maria";
+
     @Test
     public void LoginWithValidCredentials(){
         LoginPage login = new LoginPage(driver, wait);
         login.NavigateToUrl();
-        login.Login("maria","thoushallnotpass");
+        login.Login(username,"thoushallnotpass");
 
         Assert.assertEquals(" ", login.AssertErrorValidationMessage());
     }
 
 
     @Test
-        public void LoginWithInValidCredentials(String username){
+        public void LoginWithInValidCredentials(){  // Where do you get the 'username' value from? Without such, you can't run a test.
             try {
                 LoginPage login = new LoginPage(driver, wait);
                 login.NavigateToUrl();
